@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    /* 모바일 우선, 데스크탑 최대 너비 제한 */
+}
+
+h1 {
+    color: #5a3e2b;
+    /* 쿠키와 어울리는 색상 */
+    margin-bottom: 25px;
+}
+
+#cookie-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+    /* 버튼을 이미지 위에 올리려면 */
+    cursor: pointer;
+    /* 이미지 클릭 가능하게 */
+}
+
+#fortune-cookie-img {
+    max-width: 200px;
+    /* 쿠키 이미지 크기 조절 */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    /* 가운데 정렬 및 버튼과의 간격 */
+    transition: transform 0.3s ease;
+    /* 클릭 효과 */
+}
+
+#fortune-cookie-img:hover {
+    transform: scale(1.05);
+}
+
+#fortune-cookie-img:active {
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#open-cookie-btn,
+#retry-btn {
+    background-color: #8c6d52;
+    /* 쿠키와 어울리는 색상 */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    /* 둥근 버튼 */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    /* 버튼 너비 내용에 맞게 */
+    margin-top: 10px;
+}
+
+#open-cookie-btn:hover,
+#retry-btn:hover {
+    background-color: #7a5c43;
+}
+
+#message-area {
+    background-color: #fff8e1;
+    /* 메시지 배경 */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px dashed #e0cda8;
+    min-height: 50px;
+    /* 메시지 영역 최소 높이 */
+}
+
+#fortune-message {
+    font-size: 1.1em;
+    color: #5a3e2b;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none !important;
+    /* 확실하게 숨김 */
+}
+
+/* 초기 버튼 스타일링 (선택적) */
+.initial-btn {
+    /* 특별한 스타일이 필요하면 여기에 추가 */
+}
+
+/* 모바일 화면 조정 (이미 위에서 모바일 우선으로 대부분 처리됨) */
+@media (max-width: 380px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #open-cookie-btn,
+    #retry-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

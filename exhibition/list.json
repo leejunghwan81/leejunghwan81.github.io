@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "dooom (장성현)",
+    "description": "적을 죽이는 FPS 게임",
+    "url": "https://jsh11081108.github.io/"
+  },
+  {
+    "id": 2,
+    "title": "솔리테어 (피라미드) (임도현)",
+    "description": "카드들을 최대 2개까지 선택하여 총 합을 13으로 만들어 카드를 없애는 게임입니다. 카드 더미를 제외한 모든 카드를 소모하면 게임이 클리어됩니다. (A는 1, J는 11, Q는 12, K는 13의 값을 가집니다.)",
+    "url": "https://2023021-hue.github.io"
+  },
+  {
+    "id": 3,
+    "title": "래비우스 (변승훈)",
+    "description": "고전 게임 '라이든'과 '제비우스'라는 2가지 게임을 합성한 종스크롤 무한 게임입니다.",
+    "url": "https://studenteeden.github.io"
+  },
+  {
+    "id": 4,
+    "title": "ISEDOLGOMOK 오목! (홍인호)",
+    "description": "AI랑 오목할 수 있다.",
+    "url": "https://2023231.github.io"
+  },
+  {
+    "id": 5,
+    "title": "사과뱀 게임 (남궁제갈봉춘)",
+    "description": "뱀을 방향키로 조종하며 벽을 피해 사과를 먹는 게임",
+    "url": "https://dabineeevee133.github.io/"
+  },
+  {
+    "id": 6,
+    "title": "테트리스 (서예준)",
+    "description": "←키를 누르면 왼쪽으로 가고 →키를 누르면 오른쪽으로 가고 스페이스는 하단으로 바로내려가고 z키를 누르면 블럭의 모양이 바뀐다",
+    "url": "https://sueyejun.github.io/"
+  },
+  {
+    "id": 7,
+    "title": "영어단어 quiz!⭐ (탐켄치)",
+    "description": "초등, 중학생 수준에 단어 1000가지중에서 무작위로 나오는 단어의 뜻을 맞추는 퀴즈입니다. 초성힌트를 받을수 있고 포기하여 답을 알수있으며 틀렸거나 맞힌 답을 복습할수도 있습니다",
+    "url": "https://2023017-ai.github.io"
+  }
+]

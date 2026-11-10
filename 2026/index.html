@@ -16,11 +16,49 @@
             background-color: #f4f8fc;
         }
         .card-hover {
-            transition: all 0.25s ease-in-out;
+            position: relative;
+            isolation: isolate;
+            transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
         }
-        .card-hover:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 32px -8px rgba(14, 116, 144, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+        .card-hover::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            z-index: -1;
+            border: 2px solid transparent;
+            border-radius: inherit;
+            background:
+                linear-gradient(white, white) padding-box,
+                linear-gradient(110deg, #ff4675, #ffad40, #f9e65c, #43e3a2, #45b8ff, #a269ff, #ff4675) border-box;
+            background-size: 100% 100%, 250% 100%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out;
+        }
+        @media (hover: hover) {
+            .card-hover:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 16px 32px -8px rgba(91, 74, 200, 0.25);
+            }
+            .card-hover:hover::before {
+                opacity: 1;
+                animation: rainbow-highlight 2.8s ease-in-out infinite alternate;
+            }
+        }
+        @keyframes rainbow-highlight {
+            from { background-position: 0 0, 0% 50%; }
+            to { background-position: 0 0, 100% 50%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .card-hover, .card-hover::before {
+                transition: none;
+            }
+            .card-hover:hover {
+                transform: none;
+            }
+            .card-hover:hover::before {
+                animation: none;
+            }
         }
     </style>
 </head>
@@ -31,30 +69,16 @@
         
         <!-- 상단 헤더 영역 -->
         <header class="text-center my-4">
-            <!-- 소제목 배지 -->
-            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-lg mb-3 shadow-sm border border-blue-200">
-                <i class="fa-solid fa-code"></i>
-                <span>코딩동아리 전시회</span>
-            </div>
-            
             <!-- 메인 타이틀 -->
             <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3">
                 2026 성일중학교 코딩동아리 작품소개
             </h1>
             
-            <!-- 서브 타이틀 및 작품 수 -->
-            <div class="flex items-center justify-center gap-3 text-slate-600 font-medium text-lg">
-                <span>학생들의 창의적인 아이디어와 노력이 담긴 프로젝트입니다.</span>
-                <span class="inline-block w-1.5 h-1.5 rounded-full bg-slate-300"></span>
-                <span class="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-md border border-blue-200">
-                    총 18개 작품
-                </span>
-            </div>
         </header>
 
-        <!-- 작품 그리드 영역 (1920 해상도 맞춤 3컬럼 고정) -->
+        <!-- 작품 그리드 영역 -->
         <main class="my-6">
-            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- 자바스크립트로 카드가 동적 생성됩니다 -->
             </div>
         </main>
